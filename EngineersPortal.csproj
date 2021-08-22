@@ -1,0 +1,955 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C8577844-8553-4C3A-A4A0-185D527C6452}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EngineersPortal</RootNamespace>
+    <AssemblyName>EngineersPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Dashboard.Designer.cs">
+      <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blogs.Designer.cs">
+      <DependentUpon>Blogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blog_Post_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blog_Post_Management.Designer.cs">
+      <DependentUpon>Blog_Post_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chatting_Professional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chatting_Professional.Designer.cs">
+      <DependentUpon>Chatting_Professional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chatting_Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chatting_Student.Designer.cs">
+      <DependentUpon>Chatting_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Job_Circular_Post_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Job_Circular_Post_Management.Designer.cs">
+      <DependentUpon>Job_Circular_Post_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notice_Post_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notice_Post_Management.Designer.cs">
+      <DependentUpon>Notice_Post_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Portfolio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Portfolio.Designer.cs">
+      <DependentUpon>Portfolio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Portfolio_Post_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Portfolio_Post_Management.Designer.cs">
+      <DependentUpon>Portfolio_Post_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Post_Blogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Post_Blogs.Designer.cs">
+      <DependentUpon>Post_Blogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Job_Circular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Job_Circular.Designer.cs">
+      <DependentUpon>Job_Circular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notice.Designer.cs">
+      <DependentUpon>Notice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Post_Job_Circular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Post_Job_Circular.Designer.cs">
+      <DependentUpon>Post_Job_Circular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Post_Notice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Post_Notice.Designer.cs">
+      <DependentUpon>Post_Notice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Post_Portfolio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Post_Portfolio.Designer.cs">
+      <DependentUpon>Post_Portfolio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Post_Question.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Post_Question.Designer.cs">
+      <DependentUpon>Post_Question.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Professionals_Make_Post.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Professionals_Make_Post.Designer.cs">
+      <DependentUpon>Professionals_Make_Post.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solution.Designer.cs">
+      <DependentUpon>Solution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solution_Post_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solution_Post_Management.Designer.cs">
+      <DependentUpon>Solution_Post_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students_Make_Post.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students_Make_Post.Designer.cs">
+      <DependentUpon>Students_Make_Post.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Professional_Posts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Professional_Posts.Designer.cs">
+      <DependentUpon>Professional_Posts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Posts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_Posts.Designer.cs">
+      <DependentUpon>Student_Posts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Post_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Post_Management.Designer.cs">
+      <DependentUpon>Post_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Professional Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Professional Registration.Designer.cs">
+      <DependentUpon>Professional Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Professional_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Professional_Dashboard.Designer.cs">
+      <DependentUpon>Professional_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Professional_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Professional_Profile.Designer.cs">
+      <DependentUpon>Professional_Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Professional_User_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Professional_User_Management.Designer.cs">
+      <DependentUpon>Professional_User_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Signup.Designer.cs">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Registration.Designer.cs">
+      <DependentUpon>Student Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_Dashboard.Designer.cs">
+      <DependentUpon>Student_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_Profile.Designer.cs">
+      <DependentUpon>Student_Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_User_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_User_Management.Designer.cs">
+      <DependentUpon>Student_User_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System_DatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>System_DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="System_DatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>System_DatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="System_DatabaseDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>System_DatabaseDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="System_DatabaseDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>System_DatabaseDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="System_DatabaseDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>System_DatabaseDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="System_DatabaseDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>System_DatabaseDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="System_DatabaseDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>System_DatabaseDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="System_DatabaseDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>System_DatabaseDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="System_DatabaseDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>System_DatabaseDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="System_DatabaseDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>System_DatabaseDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="System_DatabaseDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>System_DatabaseDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="System_DatabaseDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>System_DatabaseDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="System_DatabaseDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>System_DatabaseDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="System_DatabaseDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>System_DatabaseDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="System_DatabaseDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>System_DatabaseDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="System_DatabaseDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>System_DatabaseDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="User_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Management.Designer.cs">
+      <DependentUpon>User_Management.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin_Dashboard.resx">
+      <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blogs.dje.resx">
+      <DependentUpon>Blogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blogs.resx">
+      <DependentUpon>Blogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blog_Post_Management.resx">
+      <DependentUpon>Blog_Post_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chatting_Professional.resx">
+      <DependentUpon>Chatting_Professional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chatting_Student.resx">
+      <DependentUpon>Chatting_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Job_Circular_Post_Management.resx">
+      <DependentUpon>Job_Circular_Post_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notice_Post_Management.resx">
+      <DependentUpon>Notice_Post_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Portfolio.resx">
+      <DependentUpon>Portfolio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Portfolio_Post_Management.resx">
+      <DependentUpon>Portfolio_Post_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Post_Blogs.resx">
+      <DependentUpon>Post_Blogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Job_Circular.resx">
+      <DependentUpon>Job_Circular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notice.resx">
+      <DependentUpon>Notice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Post_Job_Circular.resx">
+      <DependentUpon>Post_Job_Circular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Post_Notice.resx">
+      <DependentUpon>Post_Notice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Post_Portfolio.resx">
+      <DependentUpon>Post_Portfolio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Post_Question.resx">
+      <DependentUpon>Post_Question.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Professionals_Make_Post.resx">
+      <DependentUpon>Professionals_Make_Post.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solution.resx">
+      <DependentUpon>Solution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solution_Post_Management.resx">
+      <DependentUpon>Solution_Post_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students_Make_Post.resx">
+      <DependentUpon>Students_Make_Post.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Professional_Posts.resx">
+      <DependentUpon>Professional_Posts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_Posts.resx">
+      <DependentUpon>Student_Posts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Post_Management.resx">
+      <DependentUpon>Post_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Professional Registration.resx">
+      <DependentUpon>Professional Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Professional_Dashboard.resx">
+      <DependentUpon>Professional_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Professional_Profile.resx">
+      <DependentUpon>Professional_Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Professional_User_Management.resx">
+      <DependentUpon>Professional_User_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Signup.resx">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Registration.resx">
+      <DependentUpon>Student Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_Dashboard.resx">
+      <DependentUpon>Student_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_Profile.resx">
+      <DependentUpon>Student_Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_User_Management.resx">
+      <DependentUpon>Student_User_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Management.resx">
+      <DependentUpon>User_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="System_DatabaseDataSet.xsc">
+      <DependentUpon>System_DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>System_DatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="System_DatabaseDataSet.xss">
+      <DependentUpon>System_DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet1.xsc">
+      <DependentUpon>System_DatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>System_DatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="System_DatabaseDataSet1.xss">
+      <DependentUpon>System_DatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet10.xsc">
+      <DependentUpon>System_DatabaseDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>System_DatabaseDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="System_DatabaseDataSet10.xss">
+      <DependentUpon>System_DatabaseDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet11.xsc">
+      <DependentUpon>System_DatabaseDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>System_DatabaseDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="System_DatabaseDataSet11.xss">
+      <DependentUpon>System_DatabaseDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet12.xsc">
+      <DependentUpon>System_DatabaseDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>System_DatabaseDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="System_DatabaseDataSet12.xss">
+      <DependentUpon>System_DatabaseDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet13.xsc">
+      <DependentUpon>System_DatabaseDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>System_DatabaseDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="System_DatabaseDataSet13.xss">
+      <DependentUpon>System_DatabaseDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet14.xsc">
+      <DependentUpon>System_DatabaseDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>System_DatabaseDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="System_DatabaseDataSet14.xss">
+      <DependentUpon>System_DatabaseDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet15.xsc">
+      <DependentUpon>System_DatabaseDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>System_DatabaseDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="System_DatabaseDataSet15.xss">
+      <DependentUpon>System_DatabaseDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet2.xsc">
+      <DependentUpon>System_DatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>System_DatabaseDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="System_DatabaseDataSet2.xss">
+      <DependentUpon>System_DatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet3.xsc">
+      <DependentUpon>System_DatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>System_DatabaseDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="System_DatabaseDataSet3.xss">
+      <DependentUpon>System_DatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet4.xsc">
+      <DependentUpon>System_DatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>System_DatabaseDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="System_DatabaseDataSet4.xss">
+      <DependentUpon>System_DatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet5.xsc">
+      <DependentUpon>System_DatabaseDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>System_DatabaseDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="System_DatabaseDataSet5.xss">
+      <DependentUpon>System_DatabaseDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet6.xsc">
+      <DependentUpon>System_DatabaseDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>System_DatabaseDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="System_DatabaseDataSet6.xss">
+      <DependentUpon>System_DatabaseDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet7.xsc">
+      <DependentUpon>System_DatabaseDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>System_DatabaseDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="System_DatabaseDataSet7.xss">
+      <DependentUpon>System_DatabaseDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet8.xsc">
+      <DependentUpon>System_DatabaseDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>System_DatabaseDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="System_DatabaseDataSet8.xss">
+      <DependentUpon>System_DatabaseDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet9.xsc">
+      <DependentUpon>System_DatabaseDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="System_DatabaseDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>System_DatabaseDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="System_DatabaseDataSet9.xss">
+      <DependentUpon>System_DatabaseDataSet9.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wave %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scooter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Very Blue %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scooter1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lawrencium.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Timber.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Man of Steel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ServQuick.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart1470676.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart2942875.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Facebook Messenger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Azure Pop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Visions of Grandeur.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Profile_Picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Profile_Picture1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deep Space.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout256_24927.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder-mail-4341305_120538.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\article_blog_sign_icon-icons.com_51086.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_man_user_support_supportfortheuser_aquestion_theclient_2330.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documentation_folder_document_management_files_file_project_icon_142253.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4288584andbusinessfinancepersonalportfolioprofileresume-115772_115741.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_setting_options_icon_181546.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting_icon-icons.com_65723.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1492608037-13-setting-configure-repair-support-optimization-google_83381.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rules_of_Fight_Club_icon-icons.com_75617.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagram-06_24511.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signupsign_inscribirs_2798.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_icon_176905.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jobs_craiglist_icon-icons.com_51083.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_accounts_15362.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blog_icon-icons.com_53707.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hr_candidate_search_job_icon_191358.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\announcement_78371.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Anamnisar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lunada.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lunada %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Anamnisar1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Карта 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bloody Mary %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lg0C.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\post.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\post1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\post2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-gif-maker.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notice.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngfind.com-silver-lines-png-3709406.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wave.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logiin.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\liz-gross-signup.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no-found.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home decoration.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-gif-maker %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_man_usersearch_thesearch_theclient_2356.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_User-80_icon-icons.com_57283.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block-user_icon-icons.com_68326.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard_icon_182989.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Students.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Professionals2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Professionals.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Post.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Posts.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Message.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notice1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blogs.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\solution.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-gif-maker1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portfolio project.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Portfolio_.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Profile.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Post CV.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_man_juggling_three_jobs_lg_nwm.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_1-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_1-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poost job siircular.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BLOG.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_5-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_1rsz_colorful-portfolio-text-vector-design-260nw-1845733141.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colorful-portfolio-text-vector-design-260nw-1845733141-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power_reset_1847.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blog management.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\solution management.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Portfolio management.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\job management.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\THPv.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_deletethedatabase_exit_db_delete_busines_2346.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send_121758.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_send_128_28719.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email-send256_25228.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newmail_message_16655.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newmail_message_166551.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_delete_12881.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear-button.svg.med-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crosscirclehd_106118.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\android-send_icon-icons.com_50500.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
